@@ -57,6 +57,7 @@
         }
 
         function OpenMultiplayer(link, val, token, bgm, sfx) {
+          
           const url = link + '?auth=' + token + '&uuid=' + val + '&sett=' + bgm + '.' + sfx;
           if (isAndroid() || isIOS()) {
               const message = { action: "open_game", value: url };
@@ -64,6 +65,8 @@
           } else {
               window.location.href = url;
           }
+
+          alert("Open Multiplayer");
         }
 
 
